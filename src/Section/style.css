@@ -1,0 +1,22 @@
+.section {
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+.section__secondHeader {
+    padding: 10px 20px;
+    border-bottom: 2px solid lightgray;
+}
+
+.section__secondHeader--tasksList {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+@media (max-width: 767px) {
+    .section__secondHeader--tasksList {
+        display: grid;
+        grid-template-rows: 1fr auto auto;
+        grid-template-columns: auto;
+    }
+}

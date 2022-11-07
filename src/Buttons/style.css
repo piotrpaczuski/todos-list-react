@@ -1,0 +1,29 @@
+.section__buttons {
+    border: none;
+    color: hsl(180, 100%, 25%);
+    background: transparent;
+    padding: 20px;
+    transition: 0.5s;
+}
+
+@media (max-width: 767px) {
+    .section__buttons {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .section__buttons-centred {
+        display: grid;
+    }
+}
+
+.section__buttons:hover {
+    color: hsl(180, 100%, 40%);
+    cursor: pointer;
+}
+
+.section__buttons:disabled {
+    color: grey;
+    cursor: auto;
+}

@@ -1,0 +1,53 @@
+.tasks__list {
+    list-style: none;
+    padding: 20px;
+}
+
+.tasks__listItem {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    padding: 10px;
+    align-items: center;
+    border-bottom: 2px solid lightgray;
+}
+
+.tasks__listItem-hidden {
+    display: none;
+}
+
+.tasks__done {
+    text-decoration: line-through;
+}
+
+.tasks__buttonAdd {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(76, 190, 76);
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: 0.4s;
+}
+
+.tasks__buttonAdd:hover {
+    background-color: hsl(120, 47%, 63%);
+}
+
+.tasks__buttonRemove {
+    width: 30px;
+    height: 30px;
+    background-color: hsl(0, 81%, 58%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: 0.4s;
+}
+
+.tasks__buttonRemove:hover {
+    background-color: hsl(0, 81%, 70%);
+}
