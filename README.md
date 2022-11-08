@@ -5,7 +5,7 @@
 This application is easy to use. Allows you to add new tasks, mark them to done and remove them
 
 ## Demo
-[Project](https://piotrpaczuski.github.io/ToDoList/)
+[Project](https://piotrpaczuski.github.io/todos-list-react/)
 
 <img src="src/share.png" alt="layout" width="400px">
 
