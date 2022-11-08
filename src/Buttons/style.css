@@ -13,7 +13,7 @@
 }
 
 @media (max-width: 767px) {
-    .buttons-centred {
+    .buttons--centred {
         display: grid;
     }
 }

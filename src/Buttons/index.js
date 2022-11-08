@@ -2,7 +2,7 @@ import "./style.css";
 
 const Buttons = ({ tasks, hideDoneTasks }) => (
 
-    <span className="buttons-centred">
+    <span className="buttons--centred">
         {!!tasks.length && (
             <>
                 <button className="buttons">{hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone</button>
