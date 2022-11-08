@@ -3,18 +3,18 @@
     margin-bottom: 30px;
 }
 
-.section__secondHeader {
+.section__Header {
     padding: 10px 20px;
     border-bottom: 2px solid lightgray;
 }
 
-.section__secondHeader--tasksList {
+.section__Header--tasksList {
     display: grid;
     grid-template-columns: 1fr auto;
 }
 
 @media (max-width: 767px) {
-    .section__secondHeader--tasksList {
+    .section__Header--tasksList {
         display: grid;
         grid-template-rows: 1fr auto auto;
         grid-template-columns: auto;
