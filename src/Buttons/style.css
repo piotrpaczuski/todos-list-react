@@ -1,4 +1,4 @@
-.buttons {
+.buttons__button {
     border: none;
     color: hsl(180, 100%, 25%);
     background: transparent;
@@ -7,23 +7,23 @@
 }
 
 @media (max-width: 767px) {
-    .buttons {
+    .buttons__button {
         padding: 10px;
     }
 }
 
-@media (max-width: 767px) {
-    .buttons--centred {
-        display: grid;
-    }
-}
-
-.buttons:hover {
+.buttons__button:hover {
     color: hsl(180, 100%, 40%);
     cursor: pointer;
 }
 
-.buttons:disabled {
+.buttons__button:disabled {
     color: grey;
     cursor: auto;
+}
+
+@media (max-width: 767px) {
+    .buttons {
+        display: grid;
+    }
 }

@@ -2,11 +2,11 @@ import "./style.css";
 
 const Buttons = ({ tasks, hideDoneTasks }) => (
 
-    <span className="buttons--centred">
+    <span className="buttons">
         {!!tasks.length && (
             <>
-                <button className="buttons">{hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone</button>
-                <button className="buttons"
+                <button className="buttons__button">{hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone</button>
+                <button className="buttons__button"
                     disabled={tasks.every(({ done }) => done)}>Ukończ wszystkie</button>
             </>
         )}
