@@ -7,7 +7,7 @@ This application is easy to use. Allows you to add new tasks, mark them to done 
 ## Demo
 [Project](https://piotrpaczuski.github.io/todos-list-react/)
 
-<img src="public/share.png" alt="layout" width="1000px">
+<img src="public/viewApp.png" alt="layout" width="1000px">
 
 ## Technologies
 - HTML
