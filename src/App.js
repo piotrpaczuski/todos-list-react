@@ -4,17 +4,17 @@ import Buttons from "./Buttons";
 import Section from "./Section";
 import Header from "./Header";
 
-const tasks =[
-  {id: 1, content: "Przejść na Reacta", done: false},
-  {id: 2, content: "Zjeść obiad", done: true}
+const tasks = [
+  { id: 1, content: "Przejść na Reacta", done: false },
+  { id: 2, content: "Zjeść obiad", done: true }
 ];
 
-const hideDoneTasks = false;
+const hideDone = false;
 
 function App() {
   return (
     <>
-      <Header 
+      <Header
         header={"Lista zadań"}
       />
       <Section
@@ -23,8 +23,8 @@ function App() {
       />
       <Section
         title={"Lista zadań"}
-        extraContent={<Buttons tasks={tasks} hideDoneTasks={hideDoneTasks} />}
-        body={<Tasks tasks={tasks} hideDoneTasks={hideDoneTasks} />}
+        extraContent={<Buttons tasks={tasks} hideDone={hideDone} />}
+        body={<Tasks tasks={tasks} hideDone={hideDone} />}
       />
     </>
   );
