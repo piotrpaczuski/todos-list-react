@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Form from "./Form";
 import Tasks from "./Tasks";
 import Buttons from "./Buttons";
@@ -7,8 +7,24 @@ import Header from "./Header";
 
 
 function App() {
+
+  const getLocalStorage = () => {
+    let tasks = localStorage.getItem("newTask")
+    if (tasks) {
+      return tasks = JSON.parse(localStorage.getItem("newTask"));
+    }
+    else {
+      return [];
+    }
+  }
+
   const [hideDone, setHideDone] = useState(false);
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(getLocalStorage);
+
+  useEffect(() => {
+    localStorage.setItem("newTask", JSON.stringify(tasks));
+  }, [tasks]
+  )
 
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone);
@@ -56,7 +72,8 @@ function App() {
       />
       <Section
         title={"Lista zadań"}
-        extraContent={<Buttons tasks={tasks} hideDone={hideDone} toggleHideDone={toggleHideDone} setAllDone={setAllDone} />}
+        extraContent={<Buttons tasks={tasks} hideDone={hideDone} toggleHideDone={toggleHideDone} setAllDone={setAllDone}
+        />}
         body={<Tasks tasks={tasks} hideDone={hideDone} removeTasks={removeTasks} toggleTaskDone={toggleTaskDone} />}
       />
     </>
