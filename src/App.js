@@ -8,23 +8,14 @@ import Header from "./Header";
 
 function App() {
 
-  const getLocalStorage = () => {
-    let tasks = localStorage.getItem("newTask")
-    if (tasks) {
-      return tasks = JSON.parse(localStorage.getItem("newTask"));
-    }
-    else {
-      return [];
-    }
-  }
+  const getLocalStorage = () => JSON.parse(localStorage.getItem("newTask")) || [];
 
   const [hideDone, setHideDone] = useState(false);
   const [tasks, setTasks] = useState(getLocalStorage);
 
   useEffect(() => {
     localStorage.setItem("newTask", JSON.stringify(tasks));
-  }, [tasks]
-  )
+  }, [tasks]);
 
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone);
