@@ -1,9 +1,11 @@
-.tasks {
+import styled, { css } from "styled-components";
+
+export const StyledList = styled.ul`
     list-style: none;
     padding: 20px;
-}
+`;
 
-.tasks__listItem {
+export const StyledListItem = styled.li`
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -12,17 +14,19 @@
     padding: 10px;
     align-items: center;
     border-bottom: 1px solid lightgray;
-}
 
-.tasks__listItem-hidden {
-    display: none;
-}
+    ${({hidden}) => hidden && css`
+        display: none;
+    `}
+`;
 
-.tasks__done {
-    text-decoration: line-through;
-}
+export const StyledSpan = styled.span`
+    ${({done}) => done && css`
+        text-decoration: line-through;
+    `}
+`;
 
-.tasks__buttonAdd {
+export const StyledButtonAdd = styled.button`
     width: 30px;
     height: 30px;
     background-color: rgb(76, 190, 76);
@@ -31,13 +35,13 @@
     cursor: pointer;
     margin-right: 10px;
     transition: 0.4s;
-}
 
-.tasks__buttonAdd:hover {
-    background-color: hsl(120, 47%, 63%);
-}
+    &:hover {
+        background-color: hsl(120, 47%, 63%);
+    }
+`;
 
-.tasks__buttonRemove {
+export const StyledButtonRemove = styled.button`
     width: 30px;
     height: 30px;
     background-color: hsl(0, 81%, 58%);
@@ -46,8 +50,8 @@
     cursor: pointer;
     margin-left: 10px;
     transition: 0.4s;
-}
 
-.tasks__buttonRemove:hover {
-    background-color: hsl(0, 81%, 70%);
-}
+    &:hover {
+        background-color: hsl(0, 81%, 70%);
+    }
+`;
