@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 
 const useTasks = () => {
-    const getLocalStorage = () => JSON.parse(localStorage.getItem("newTask")) || [];
-
-    const [tasks, setTasks] = useState(getLocalStorage);
+    
+    const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem("newTask")) || []);
 
     useEffect(() => {
         localStorage.setItem("newTask", JSON.stringify(tasks));
