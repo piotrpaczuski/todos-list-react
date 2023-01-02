@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledSpan = styled.span`
+export const StyledButtons = styled.div`
     @media (max-width: 767px) {
         display: grid;
     }

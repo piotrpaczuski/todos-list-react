@@ -1,8 +1,8 @@
-import { StyledSpan, StyledButton } from "./styled"
+import { StyledButtons, StyledButton } from "./styled"
 
 const Buttons = ({ tasks, hideDone, toggleHideDone, setAllDone }) => (
 
-    <StyledSpan>
+    <StyledButtons>
         {!!tasks.length && (
             <>
                 <StyledButton onClick={toggleHideDone}>
@@ -15,7 +15,7 @@ const Buttons = ({ tasks, hideDone, toggleHideDone, setAllDone }) => (
                 </StyledButton>
             </>
         )}
-    </StyledSpan>
+    </StyledButtons>
 );
 
 export default Buttons; 
