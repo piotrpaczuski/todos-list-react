@@ -26,30 +26,27 @@ export const StyledSpan = styled.span`
     `}
 `;
 
-export const StyledButtonAdd = styled.button`
+const Button = styled.button`
     width: 30px;
     height: 30px;
-    background-color: rgb(76, 190, 76);
     color: white;
     border: none;
     cursor: pointer;
-    margin-right: 10px;
     transition: 0.4s;
+`;
+
+export const StyledButtonAdd = styled(Button)`
+    background-color: rgb(76, 190, 76);
+    margin-right: 10px;
 
     &:hover {
         background-color: hsl(120, 47%, 63%);
     }
 `;
 
-export const StyledButtonRemove = styled.button`
-    width: 30px;
-    height: 30px;
+export const StyledButtonRemove = styled(Button)`
     background-color: hsl(0, 81%, 58%);
-    color: white;
-    border: none;
-    cursor: pointer;
     margin-left: 10px;
-    transition: 0.4s;
 
     &:hover {
         background-color: hsl(0, 81%, 70%);
