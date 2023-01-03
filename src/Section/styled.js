@@ -5,7 +5,7 @@ export const StyledSection = styled.section`
     margin-bottom: 30px;
 `;
 
-export const StyledSectionHeader = styled.div`
+export const StyledSectionHeader = styled.header`
     padding: 10px 20px;
     border-bottom: 2px solid lightgray;
     display: grid;
